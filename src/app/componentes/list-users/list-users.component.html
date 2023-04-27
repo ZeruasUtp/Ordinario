@@ -1,0 +1,66 @@
+
+<div *ngIf="!loading" class="container">
+<div *ngIf="listUsers.length == 0" style="text-align: center; color: black;
+font-size: 25px;
+font-weight: bold;">
+  <h5>Para ver un ejemplo ingrese el siguiente link: </h5><br>
+  <h5>http://localhost:4200/1</h5>
+</div>   
+</div>
+
+
+
+  <!--CONTINUACION-->
+<div style="text-align: center;">
+  <div  *ngFor="let item of listUsers" class="my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 600px; overflow: hidden; border-radius: 1px;">
+    <img  src="https://pymstatic.com/5844/conversions/personas-emocionales-wide.jpg" alt="Man with backpack"    
+        class="d-block w-full" height="280px">
+
+<div *ngFor="let item of listUsers" class="px-2 py-2">
+
+<h1 class="ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+  {{item.businessName}}
+</h1>
+
+<div class="mt-2" style="font-weight: bold;">
+<p>
+  Dirección: {{item.businessAddress}}
+</p>
+<p>
+  Telefono: {{item.businessPhone}}
+</p>
+<p>
+  Correo: {{item.businessEmail}}
+</p>
+
+<p>
+  Logo: {{item.businessLogo}}
+</p>
+</div>
+  <p style="margin-top: 10px;" class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+  Facebook: {{item.facebookLink}}
+</p>
+
+<p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+  Twitter: {{item.twitterLink}}
+</p>
+<p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+  Instagram: {{item.instagramLink}}
+</p>
+<p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+  Linkedin: {{item.linkedinLink}}
+</p>
+<p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+  Youtube: {{item.youtubeLink}}
+</p>
+
+</div>
+<div *ngFor="let item of listUsers" class="mt-4">
+  <a href="#0" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+    {{item.businessWebsite}}
+  </a>
+</div>
+</div>
+
+
+</div>
